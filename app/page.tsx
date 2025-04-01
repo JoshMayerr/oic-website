@@ -2,102 +2,243 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <p className="mb-8 mt-2">
+        A free and open source desktop app that assists you on all coding
+        interviews. Undetectable by all screen sharing applications. Cuz f*ck
+        leetcode. Ace all of your coding interviews with the help of any LLM you
+        want. You literally don't have to study anymore.
+      </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+        <a href="/download" className="block w-full">
+          <div className="bg-gradient-to-b from-[#4d8cf4] via-[#3b7eea] to-[#2a6de0] hover:from-[#5999ff] hover:via-[#4c8aee] hover:to-[#3a7df0] p-3 px-5 rounded-md text-center mb-4 sm:mb-12 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 border-t border-blue-300">
+            <div className="flex items-center justify-center gap-3 font-medium text-white">
+              <Image
+                src="/apple.svg"
+                className="text-white -translate-y-0.25"
+                alt="Apple logo"
+                width={14}
+                height={14}
+              />
+              Download for Mac
+            </div>
+          </div>
+        </a>
+        <a href="/download" className="block w-full">
+          <div className="bg-gradient-to-b from-[#4d8cf4] via-[#3b7eea] to-[#2a6de0] hover:from-[#5999ff] hover:via-[#4c8aee] hover:to-[#3a7df0] p-3 px-5 rounded-md text-center mb-4 sm:mb-12 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 border-t border-blue-300">
+            <div className="flex items-center justify-center gap-3 font-medium text-white">
+              <Image
+                src="/windows.svg"
+                className="text-white -translate-y-0.25"
+                alt="Windows logo"
+                width={14}
+                height={14}
+              />
+              Download for Windows
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4 mb-8">
+        <div className="w-full">
+          <div className="relative" style={{ aspectRatio: "16/9" }}>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/demo.png"
+              alt="Demo"
+              fill
+              className="bg-gray-200 rounded-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">What you see.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="w-full">
+          <div className="relative" style={{ aspectRatio: "16/9" }}>
+            <Image
+              src="/demo.png"
+              alt="Demo"
+              fill
+              className="bg-gray-200 rounded-lg"
+            />
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            What your interviewer sees.
+          </p>
+        </div>
+      </div>
+
+      <h2 className="text-md font-semibold mb-6">
+        Works on all interview software
+      </h2>
+
+      {/* table with app names and check marks */}
+      <div className="overflow-x-auto">
+        <table className="border-collapse w-full mb-6">
+          <thead>
+            <tr className="border border-gray-200">
+              <th className="text-left py-2 px-4 font-medium border-l border-r border-gray-200 w-4/5">
+                App Name
+              </th>
+              <th className="py-2 px-4 font-medium border-l border-r border-gray-200 w-1/5">
+                Compatible
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                CoderPad
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                HackerRank
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                LeetCode
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                Zoom
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                Google Meet
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 px-4 border-l border-r border-gray-200">
+                Microsoft Teams
+              </td>
+              <td className="text-center py-2 px-4 border-l border-r border-gray-200">
+                ✅
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="text-md font-semibold mb-6">How it works</h2>
+
+      <div className="w-full">
+        <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+          <video
+            className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          A demo of it being used during an interview.
+        </p>
+      </div>
+
+      {/* features */}
+      <h2 className="text-md font-semibold mb-6 mt-12">Features</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+        <div className="border border-gray-200 rounded-lg p-4">
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-medium">Screen Sharing</h3>
+          </div>
+          <p className="text-gray-600 text-xs">
+            Completely invisible during screen sharing. The app runs in the
+            background without being detected.
+          </p>
+        </div>
+
+        <div className="border border-gray-200 rounded-lg p-4">
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-medium">Solution Reasoning</h3>
+          </div>
+          <p className="text-gray-600 text-xs">
+            Every solution is explained step by step, and every line of code
+            comes with comments explaining how it works.
+          </p>
+        </div>
+
+        <div className="border border-gray-200 rounded-lg p-4">
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-medium">Webcam Monitoring</h3>
+          </div>
+          <p className="text-gray-600 text-xs">
+            Move the window around to overlay on top of your code editor so your
+            eyes never wander.
+          </p>
+        </div>
+
+        <div className="border border-gray-200 rounded-lg p-4">
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-medium">Active Tab Detection</h3>
+          </div>
+          <p className="text-gray-600 text-xs">
+            Toggle the visibility of the window while keeping your cursor on the
+            interview tab.
+          </p>
+        </div>
+      </div>
+
+      {/* faq */}
+      <h2 className="text-md font-semibold mb-6">FAQ</h2>
+      <div className="flex flex-col gap-6">
+        <div className="">
+          <h3 className="text-sm mb-2">Is this free?</h3>
+          <p className="text-gray-600 text-xs">
+            Yes, it is free and open source.
+          </p>
+        </div>
+        <div className="">
+          <h3 className="text-sm mb-2">How is it undetectable?</h3>
+          <p className="text-gray-600 text-xs">
+            It uses a large combination of native APIs, settings, and configs to
+            make sure it is not detected on screen shares.
+          </p>
+        </div>
+        <div className="">
+          <h3 className="text-sm mb-2">Why make this?</h3>
+          <p className="text-gray-600 text-xs">
+            Read{" "}
+            <a href="/why" className="underline">
+              here
+            </a>
+          </p>
+        </div>
+        <div className="">
+          <h3 className="text-sm mb-2">I have a question</h3>
+          <p className="text-gray-600 text-xs">
+            Email me at{" "}
+            <a href="mailto:josh@tollbit.com" className="hover:underline">
+              josh@tollbit.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
