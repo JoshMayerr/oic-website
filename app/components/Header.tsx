@@ -5,7 +5,7 @@ async function getGitHubStars() {
   try {
     const response = await fetch(
       "https://api.github.com/repos/joshmayerr/oic",
-      { next: { revalidate: 3600 } } // Revalidate every hour
+      { next: { revalidate: 14400 } } // Revalidate every 4 hours
     );
 
     if (!response.ok) {
@@ -37,11 +37,13 @@ export default async function Header() {
       </div>
 
       <header className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0">
-        <h1 className="text-xl font-medium">Open Interview Coder</h1>
+        <Link href="/">
+          <h1 className="text-xl font-medium">Open Interview Coder</h1>
+        </Link>
 
         <nav className="flex gap-6 sm:gap-8 mb-6">
           <a
-            href="https://github.com/open-interview-coder"
+            href="https://github.com/joshmayerr/oic"
             className="flex items-center"
           >
             <span className="mr-1 hover:underline">GitHub</span>

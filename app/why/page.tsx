@@ -1,8 +1,6 @@
 export default function WhyPage() {
   return (
-    <div className="flex flex-col max-w-2xl mx-auto p-4 sm:p-8 text-sm">
-      <h1 className="text-xl font-medium mb-6">Why Open Interview Coder?</h1>
-
+    <div className="flex flex-col mt-4 text-sm">
       <p className="mb-4">
         The technical interview process is broken. It has devolved into a game
         of memorization and pattern recognition rather than a genuine assessment
@@ -10,48 +8,30 @@ export default function WhyPage() {
       </p>
 
       <p className="mb-4">
-        Companies expect candidates to spend hundreds of hours memorizing
-        algorithms and data structures for problems they will likely never
-        encounter in their actual work.
+        Companies expect candidates to spend hundreds of hours memorizing and
+        preparation, just for some AI recruiter and application reviewer to
+        auto-reject them.
       </p>
 
       <p className="mb-4">
-        Open Interview Coder was created to level the playing field. In the real
-        world, engineers use search engines, documentation, and AI tools to
-        solve problems efficiently. Why should interviews be any different?
+        Open Interview Coder can hopefully level the playing field.
       </p>
 
       <p className="mb-4">
-        This tool helps candidates focus on demonstrating their true engineering
-        skills: understanding problems, communicating effectively, and
-        implementing solutions - rather than rote memorization.
+        By making this tool free and open source, we're advocating for a new
+        interview process.
       </p>
 
       <p className="mb-4">
-        By making this tool free and open source, we're advocating for a more
-        fair and realistic interview process that values practical
-        problem-solving over theoretical knowledge.
+        There is another similar project that costs $60/month. This makes no
+        sense. That is literally taking advantage of your own people.
       </p>
 
       <p className="mb-8">
-        The best engineers aren't those who memorize algorithms - they're the
-        ones who know how to find and apply solutions effectively.
+        The whole point of something like this is for it to become ubiquitous.
+        To do that, it needs to be free. Once the system is broken, a more
+        complete, equitable, adaptive solution will thrive.
       </p>
-
-      <div className="border-t border-gray-200 pt-6 mt-6">
-        <h2 className="font-medium mb-4">Our Principles</h2>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>Interviews should assess real-world engineering skills</li>
-          <li>Access to information is part of modern engineering</li>
-          <li>
-            Everyone deserves equal opportunities regardless of background
-          </li>
-          <li>
-            Technical interviews should be about problem-solving, not
-            memorization
-          </li>
-        </ul>
-      </div>
     </div>
   );
 }
